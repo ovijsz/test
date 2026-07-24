@@ -217,21 +217,55 @@
   <div class="detail" id="detailBox"></div>
 </div>
 
+<script id="fpc-data" type="application/json">
 {
-  "meta": {...},
-  "fish": [...],
-  "baits": [...],
-  "lures": [...],
-  "hooks": [...],
-  "luretypes": [...],
-  "places": [...],
-  "fishTotal": 100,
-  "baitsTotal": 50,
-  "luresTotal": 60,
-  "hooksTotal": 40,
-  "luretypesTotal": 10,
-  "placesTotal": 20
+  "meta": {
+    "fishTotal": 100,
+    "baitsTotal": 50,
+    "luresTotal": 60,
+    "hooksTotal": 40,
+    "luretypesTotal": 10,
+    "placesTotal": 20
+  },
+  "fish": [
+    {
+      "id": 1,
+      "title": "Zivis 1",
+      "latinName": "Latīņu nosaukums 1",
+      "image": "https://example.com/zivs1.png",
+      "maxWeight": 5,
+      "baitIds": [1,2],
+      "lureIds": [1],
+      "content": "Apraksts par zivīm",
+      "howToCatch": "Kā noķert zivis"
+    }
+    // Pievieno vēl datus
+  ],
+  "baits": [
+    {
+      "id": 1,
+      "title": "Ēdāmais 1",
+      "baitType": "Viegli",
+      "weight": "10g",
+      "image": "https://example.com/esp1.png",
+      "targetFish": "Zivs 1",
+      "howToGet": ["No veikaliem", "No dārgumiem"]
+    }
+  ],
+  "lures": [
+    // Lūru dati
+  ],
+  "hooks": [
+    // Āķu dati
+  ],
+  "luretypes": [
+    // Lūru tipu dati
+  ],
+  "places": [
+    // Vietu dati
+  ]
 }
+</script>
 
 <script>
 const DATA = JSON.parse(document.getElementById('fpc-data').textContent);
