@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Krātuve — Fishing Planet uzziņa</title>
 <style>
@@ -217,9 +217,21 @@
   <div class="detail" id="detailBox"></div>
 </div>
 
-<script id="fpc-data" type="application/json">
-__DATA_JSON__
-</script>
+{
+  "meta": {...},
+  "fish": [...],
+  "baits": [...],
+  "lures": [...],
+  "hooks": [...],
+  "luretypes": [...],
+  "places": [...],
+  "fishTotal": 100,
+  "baitsTotal": 50,
+  "luresTotal": 60,
+  "hooksTotal": 40,
+  "luretypesTotal": 10,
+  "placesTotal": 20
+}
 
 <script>
 const DATA = JSON.parse(document.getElementById('fpc-data').textContent);
